@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,106 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.background {
+  background-image: radial-gradient(#ffffff 2.5px, transparent 2.5px),
+    radial-gradient(#ffffff 2.5px, transparent 2.5px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+  background-color: #b1d2ff;
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%, #474bff);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+  animation: spinner-zp9dbg 1s infinite linear;
+}
+
+@keyframes spinner-zp9dbg {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+
+.App{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.App>h1{
+  margin-top: 1.5rem;
+  background-color: white;
+  width: 90%;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.random{
+  margin-top: 2.3rem;
+  background-color: lightgreen;
+  width: 50%;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+  margin-bottom: 1rem;
+}
+
+.tag{
+  margin-top: 2.3rem;
+  background-color: lightblue;
+  width: 50%;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+  margin-bottom: 1rem;
+}
+
+h2{
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+button{
+  width: 80%;
+  background-color: white;
+  color: black;
+  border: 0;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 1.5rem;
+}
+
+button:hover{
+  background-color: rgb(207, 222, 236);
+  transition: all 0.2s;
+}
+
+input{
+  width: 80%;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  border: 0;
+  outline: 0;
 }
